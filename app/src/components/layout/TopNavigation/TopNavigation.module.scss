@@ -1,0 +1,77 @@
+@import '../../../styles/colors.scss';
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba($black, 0.1);
+}
+
+.navButtons {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburgerLine {
+  width: 25px;
+  height: 3px;
+  background-color: $black;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.navMenu {
+  display: flex;
+  align-items: center;
+}
+
+.navLink {
+  margin-right: 20px;
+  text-decoration: none;
+  color: $black;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+}
+
+.accountImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navMenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: $white;
+    box-shadow: 0 2px 4px rgba($black, 0.1);
+    z-index: 1000;
+  }
+
+  .navMenu.show {
+    display: flex;
+  }
+
+  .navLink {
+    margin: 10px 0;
+  }
+}
