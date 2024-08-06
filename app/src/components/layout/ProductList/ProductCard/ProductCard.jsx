@@ -1,12 +1,17 @@
 'use client';
 
 import Link from 'next/link';
+import styles from './ProductCard.module.scss';
 
 export default function ProductCard({ product }) {
   return (
-    <div>
-      <img src={product.image} alt={product.brand} />
-      <h2>{product.brand}</h2>
+    <div className={styles.productCardContainer}>
+      <span className={styles.productBrand}>{product.brand}</span>
+      <img
+        className={styles.productImage}
+        src={product.image}
+        alt={product.brand}
+      />
       <p>
         {product.style} - {product.substyle}
       </p>
@@ -15,7 +20,7 @@ export default function ProductCard({ product }) {
           .toLowerCase()
           .replace(/ /g, '-')}`}
       >
-        <a>View Details</a>
+        View Details
       </Link>
     </div>
   );

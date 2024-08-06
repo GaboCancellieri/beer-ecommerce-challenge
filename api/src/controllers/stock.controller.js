@@ -1,4 +1,4 @@
-import stockPrices from "../../data/stock-price";
+import * as stockPrices from "../data/stock-price.js";
 
 export function getStockPriceBySku(req, res) {
   const sku = req.params.sku;

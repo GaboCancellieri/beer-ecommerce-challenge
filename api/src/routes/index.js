@@ -1,9 +1,11 @@
-import ProductsRouter from "./product.routes";
-import StockRouter from "./stock.routes";
+import { Router } from "express";
+import productRoutes from "./products.routes.js";
+import stockRoutes from "./stock.routes.js";
 
-const routes = {
-  ProductsRouter,
-  StockRouter,
-};
+const router = Router();
+const DEFAULT_API_URL = "/api";
 
-export default routes;
+router.use(DEFAULT_API_URL, productRoutes);
+router.use(DEFAULT_API_URL, stockRoutes);
+
+export default router;

@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { getStockPriceBySku } from "../controllers/stockController";
+import { getStockPriceBySku } from "../controllers/stock.controller.js";
 
-const router = Router();
+const stockRoutes = Router();
 
-router.get("/api/stock-price/:sku", getStockPriceBySku);
+stockRoutes.get("/stock-price/:sku", getStockPriceBySku);
 
-export default router;
+export default stockRoutes;

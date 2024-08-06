@@ -1,7 +1,15 @@
-"use client";
-import { useState } from "react";
-import Link from "next/link";
-import styles from "./TopNavigation.module.css";
+'use client';
+import { useState } from 'react';
+import Link from 'next/link';
+import styles from './TopNavigation.module.scss';
+import classNames from 'classnames';
+
+const MENU_ITEMS = [
+  {
+    title: 'Products',
+    link: '/products'
+  }
+];
 
 export default function TopNavigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,27 +20,28 @@ export default function TopNavigation() {
 
   return (
     <nav className={styles.navbar}>
+      <div className={styles.logo}>
+        <Link href="/">
+          <img src="/logo.png" alt="Logo" />
+        </Link>
+      </div>
       <div className={styles.navButtons}>
         <div className={styles.hamburger} onClick={toggleMenu}>
           <span className={styles.hamburgerLine}></span>
           <span className={styles.hamburgerLine}></span>
           <span className={styles.hamburgerLine}></span>
         </div>
-        <div className={`${styles.navMenu} ${isOpen ? styles.show : ""}`}>
-          <Link href="/products">
-            <a className={styles.navLink}>Products</a>
-          </Link>
-          <Link href="/about">
-            <a className={styles.navLink}>About</a>
-          </Link>
-          <Link href="/contact">
-            <a className={styles.navLink}>Contact</a>
-          </Link>
+        <div className={classNames(styles.navMenu, { [styles.show]: isOpen })}>
+          {MENU_ITEMS.map(item => (
+            <Link key={item.title} href={item.link}>
+              {item.title}
+            </Link>
+          ))}
         </div>
       </div>
       <div className={styles.account}>
         <img
-          src="/account-picture.jpg"
+          src="/user/user-profile.webp"
           alt="Account"
           className={styles.accountImage}
         />

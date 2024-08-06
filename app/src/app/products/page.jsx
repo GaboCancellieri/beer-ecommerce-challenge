@@ -1,5 +1,10 @@
 import axios from 'axios';
-import { ProductList, ErrorHandler } from '../../components/layout';
+import {
+  ProductList,
+  ErrorHandler,
+  TopNavigation,
+  Footer
+} from '../../components/layout';
 import useConfig from '../../hooks/useConfig';
 import { parseError } from '../../utils/format';
 
@@ -18,5 +23,11 @@ export default async function ProductListingPage() {
     Component = <ErrorHandler error={parseError(err)} />;
   }
 
-  return <div>{Component}</div>;
+  return (
+    <>
+      <TopNavigation />
+      {Component}
+      <Footer />
+    </>
+  );
 }
