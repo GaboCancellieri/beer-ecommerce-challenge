@@ -17,3 +17,17 @@ export function parseError(error) {
   }
   return 'An unknown error occurred';
 }
+
+/**
+ * Transforms a given string to kebab-case.
+ * Example: "Modelo Especial" -> "modelo-especial"
+ *
+ * @param {string} str - The string to be transformed.
+ * @returns {string} - The kebab-case version of the string.
+ */
+export function toKebabCase(str) {
+  return str
+    .toLowerCase()
+    .replace(/ /g, '-')
+    .replace(/[^\w-]+/g, '');
+}

@@ -1,8 +1,23 @@
-.productListContainer {
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .productListTitle {
+    text-align: left;
+    align-self: flex-start;
+    margin: 10px 20px;
+  }
+}
+
+.listContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 20px;
+  align-items: center;
+  align-self: center;
   height: 100%;
-  width: 100%;
+  width: 375px;
 }

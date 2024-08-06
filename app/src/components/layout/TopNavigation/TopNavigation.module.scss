@@ -1,20 +1,10 @@
 @import '../../../styles/colors.scss';
 
 .navbar {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  justify-content: flex-start;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  background-color: $white;
   padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba($black, 0.1);
-}
-
-.logo {
-  img {
-    width: 60px;
-    height: 40px;
-  }
 }
 
 .navButtons {
@@ -50,14 +40,12 @@
 .account {
   display: flex;
   align-items: center;
-  align-self: flex-end;
 }
 
 .accountImage {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  object-fit: cover;
 }
 
 @media (max-width: 768px) {
@@ -73,7 +61,7 @@
     left: 0;
     width: 100%;
     background-color: $white;
-    box-shadow: 0 2px 4px rgba($black, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
   }
 
@@ -83,5 +71,51 @@
 
   .navLink {
     margin: 10px 0;
+  }
+}
+
+.backButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.detailTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.threeDotMenu {
+  position: relative;
+}
+
+.threeDotMenu button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: $white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.dropdownMenu button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $secondary;
   }
 }

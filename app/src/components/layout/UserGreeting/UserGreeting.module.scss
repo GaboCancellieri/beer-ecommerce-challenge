@@ -1,0 +1,17 @@
+@import "../../../styles/colors.scss";
+
+.userGreetingContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 10px 20px;
+
+  .greetingSalute {
+    color: $battleshipGrey;
+  }
+
+  .greetingTitle {
+    margin: 10px 0;
+  }
+}

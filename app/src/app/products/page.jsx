@@ -1,33 +1,32 @@
-import axios from 'axios';
 import {
   ProductList,
-  ErrorHandler,
+  ErrorBoundary,
   TopNavigation,
-  Footer
-} from '../../components/layout';
-import useConfig from '../../hooks/useConfig';
-import { parseError } from '../../utils/format';
+  Footer,
+  UserGreeting
+} from '@/components/layout';
+import { parseError } from '@/utils/format';
+import styles from '../page.module.scss';
+import { getAllProducts } from '@/services/products/productsService';
 
 export default async function ProductListingPage() {
-  const { API_URL } = useConfig();
-
-  let products = [];
-  let Component = null;
+  let products = null;
+  let error = null;
 
   try {
-    const res = await axios.get(`${API_URL}/api/products`);
-    products = res.data;
-    Component = <ProductList products={products} />;
+    products = await getAllProducts();
   } catch (err) {
-    console.error(err);
-    Component = <ErrorHandler error={parseError(err)} />;
+    error = parseError(err);
   }
 
   return (
-    <>
+    <div className={styles.pageContainer}>
       <TopNavigation />
-      {Component}
+      <ErrorBoundary error={error}>
+        <UserGreeting />
+        <ProductList products={products} />
+      </ErrorBoundary>
       <Footer />
-    </>
+    </div>
   );
 }

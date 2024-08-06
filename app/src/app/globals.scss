@@ -1,67 +1,50 @@
 @import '../styles/colors.scss';
+@font-face {
+  font-family: 'DM Sans Italic';
+  src: url('/fonts/DMSans/DMSans-Italic.ttf') format('truetype');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'DM Sans Light';
+  src: url('/fonts/DMSans/DMSans-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'DM Sans Medium';
+  src: url('/fonts/DMSans/DMSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('/fonts/DMSans/DMSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'DM Sans SemiBold';
+  src: url('/fonts/DMSans/DMSans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'DM Sans Thin';
+  src: url('/fonts/DMSans/DMSans-Thin.ttf') format('truetype');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'DM Sans Bold';
+  src: url('/fonts/DMSans/DMSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'DM Sans';
   background-color: $seasalt;
-  color: $black;
+  color: $jetBlack;
   margin: 0;
   padding: 0;
-}
-
-a {
-  color: $primary;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-* {
-  box-sizing: border-box;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $black;
-}
-
-p {
-  line-height: 1.6;
-  margin: 0 0 1em;
-}
-
-ul,
-ol {
-  list-style: none;
-  padding: 0;
-}
-
-button {
-  background-color: $primary;
-  color: $white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: darken($primary, 10%);
-  }
-}
-
-input,
-textarea {
-  border: 1px solid $black;
-  padding: 10px;
-  width: 100%;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
 }

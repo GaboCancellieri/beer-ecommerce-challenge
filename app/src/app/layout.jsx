@@ -4,7 +4,7 @@ import './globals.scss';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Beer Ecommerce App',
+  title: 'Beer-Oz',
   description: 'A simple ecommerce app for beer.'
 };
 

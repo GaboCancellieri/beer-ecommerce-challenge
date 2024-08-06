@@ -1,0 +1,67 @@
+@import '../../../styles/colors.scss';
+
+.font {
+  color: $jetBlack;
+}
+
+.h1 {
+  font-family: 'DM Sans Bold';
+  font-size: 40px;
+}
+
+.h2 {
+  font-family: 'DM Sans SemiBold';
+  font-size: 32px;
+}
+
+.h3 {
+  font-family: 'DM Sans Medium';
+  font-size: 28px;
+}
+
+.h4 {
+  font-family: 'DM Sans Medium';
+  font-size: 24px;
+}
+
+.h5 {
+  font-family: 'DM Sans';
+  font-size: 20px;
+}
+
+.h6 {
+  font-family: 'DM Sans';
+  font-size: 16px;
+}
+
+.title {
+  font-family: 'DM Sans Bold';
+  font-size: 24px;
+}
+
+.subtitle {
+  font-family: 'DM Sans Italic';
+  font-size: 20px;
+}
+
+.p {
+  font-family: 'DM Sans';
+  font-size: 16px;
+}
+
+.caption {
+  font-family: 'DM Sans Light';
+  font-size: 14px;
+}
+
+.overline {
+  font-family: 'DM Sans Light';
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.span {
+  font-family: 'DM Sans';
+  font-size: 16px;
+  font-weight: 500;
+}
