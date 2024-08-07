@@ -3,10 +3,10 @@ import './globals.scss';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata = {
-  title: 'Beer-Oz',
-  description: 'A simple ecommerce app for beer.'
-};
+// export const metadata = {
+//   title: 'Beer-Oz',
+//   description: 'A simple ecommerce app for beer.'
+// };
 
 export default function RootLayout({ children }) {
   return (

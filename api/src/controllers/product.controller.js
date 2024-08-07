@@ -3,15 +3,18 @@ import stockPrices from "../data/stock-price.js";
 
 /**
  * Get all products and populate the first SKU price into each product.
+ *
+ * @param {Object} req - The request object.
+ * @param {Object} res - The response object.
  */
 export function getProducts(req, res) {
-  const productsWithPrices = products.map(product => {
+  const productsWithPrices = products.map((product) => {
     const firstSkuCode = product.skus[0]?.code;
     const firstSkuPrice = stockPrices[firstSkuCode]?.price;
 
     return {
       ...product,
-      price: (firstSkuPrice / 100) || null,
+      price: firstSkuPrice / 100 || null,
     };
   });
   res.json(productsWithPrices);

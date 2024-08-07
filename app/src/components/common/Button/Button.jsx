@@ -11,7 +11,8 @@ const BUTTON_VARIANTS = [
   'success',
   'info',
   'transparent',
-  'light'
+  'light',
+  'dark'
 ];
 
 /**

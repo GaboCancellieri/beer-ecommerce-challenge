@@ -1,0 +1,12 @@
+.cardFooter {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 350px;
+  margin: 40px;
+
+  .addToBagButton {
+    padding: 12px 12px;
+    margin: 0;
+  }
+}

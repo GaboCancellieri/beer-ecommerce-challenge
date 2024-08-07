@@ -1,13 +1,18 @@
 import {
   ProductList,
-  ErrorBoundary,
   TopNavigation,
   Footer,
   UserGreeting
 } from '@/components/layout';
+import { ErrorBoundary } from '@/components/common';
 import { parseError } from '@/utils/format';
 import styles from '../page.module.scss';
-import { getAllProducts } from '@/services/products/productsService';
+import { getAllProducts } from '@/services/products.service';
+
+export const metadata = {
+  title: 'Beer-Oz - Products',
+  description: 'A simple ecommerce app for beer.'
+};
 
 export default async function ProductListingPage() {
   let products = null;

@@ -10,7 +10,7 @@ import {
   Icon
 } from '@/components/common';
 import { toKebabCase } from '@/utils/format';
-import { getProductImageIcon } from '@/utils/products';
+import { getProductImageIcon } from '@/utils/products.utils';
 import { PRODUCT_RATING } from '@/constants/products.constants';
 
 export default function ProductCard({ product, index }) {

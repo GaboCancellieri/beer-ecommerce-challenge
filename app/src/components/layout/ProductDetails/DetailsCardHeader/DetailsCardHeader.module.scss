@@ -1,0 +1,31 @@
+@import '../../../../styles/colors.scss';
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 350px;
+  margin-top: 40px;
+
+  .cardTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    .additionalInfo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      align-self: flex-start;
+      font-size: 16px;
+      color: $battleshipGrey;
+    }
+  }
+
+  .price {
+    color: $primary;
+    justify-self: flex-end;
+  }
+}

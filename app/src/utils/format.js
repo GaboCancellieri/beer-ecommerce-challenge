@@ -27,7 +27,9 @@ export function parseError(error) {
  */
 export function toKebabCase(str) {
   return str
-    .toLowerCase()
-    .replace(/ /g, '-')
-    .replace(/[^\w-]+/g, '');
+    ? str
+        .toLowerCase()
+        .replace(/ /g, '-')
+        .replace(/[^\w-]+/g, '')
+    : str;
 }

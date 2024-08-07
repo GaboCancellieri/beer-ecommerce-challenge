@@ -1,4 +1,4 @@
-import axiosInstance from '../axiosConfig';
+import axiosInstance from './axiosConfig';
 
 /**
  * Fetches the list of all products.
@@ -16,7 +16,7 @@ export const getAllProducts = async () => {
  * @param {string} productId - The ID of the product.
  * @returns {Promise<Object>} - The product details.
  */
-export const getProductById = async (productId) => {
+export const getProductById = async productId => {
   const response = await axiosInstance.get(`/api/products/${productId}`);
   return response.data;
 };

@@ -7,8 +7,11 @@
   border: none;
   cursor: pointer;
   text-align: center;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
   border-radius: 12px;
+  padding: 10px;
 
   &.small {
     width: 40px;
@@ -29,7 +32,7 @@
     &:hover {
       background-color: darken($primary, 10%);
     }
-    
+
     &.outline {
       color: $primary;
       border: 1px solid $primary;
@@ -48,6 +51,16 @@
     &:hover {
       background-color: darken($secondary, 10%);
     }
+
+    &.outline {
+      color: $secondary;
+      border: 1px solid $secondary;
+    }
+
+    &.outline:hover {
+      color: darken($secondary, 10%);
+      border: 1px solid darken($secondary, 10%);
+    }
   }
 
   &.tertiary {
@@ -56,6 +69,16 @@
 
     &:hover {
       background-color: darken($tertiary, 10%);
+    }
+
+    &.outline {
+      color: $tertiary;
+      border: 1px solid $tertiary;
+    }
+
+    &.outline:hover {
+      color: darken($tertiary, 10%);
+      border: 1px solid darken($tertiary, 10%);
     }
   }
 
@@ -98,11 +121,8 @@
   &.transparent {
     background-color: transparent;
     color: $black;
-    border: 1px solid $black;
-
-    &:hover {
-      background-color: lighten($black, 40%);
-    }
+    border: none;
+    border-radius: 0;
   }
 
   &.light {
@@ -111,6 +131,44 @@
 
     &:hover {
       background-color: darken($white, 10%);
+    }
+  }
+
+  &.dark {
+    background-color: $jetBlack;
+    color: $white;
+
+    &:hover {
+      background-color: darken($jetBlack, 10%);
+    }
+
+    &.outline {
+      color: $jetBlack;
+      border: 1px solid $jetBlack;
+    }
+
+    &.outline:hover {
+      color: darken($jetBlack, 10%);
+      border: 1px solid darken($jetBlack, 10%);
+    }
+  }
+
+  &.gray {
+    background-color: $battleshipGrey;
+    color: $white;
+
+    &:hover {
+      background-color: darken($battleshipGrey, 10%);
+    }
+
+    &.outline {
+      color: $battleshipGrey;
+      border: 1px solid $battleshipGrey;
+    }
+
+    &.outline:hover {
+      color: darken($primary, 10%);
+      border: 1px solid darken($primary, 10%);
     }
   }
 

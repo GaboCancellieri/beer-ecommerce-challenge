@@ -12,7 +12,7 @@ const USER_DATA = {
 export default function UserGreeting() {
   return (
     <div className={styles.userGreetingContainer}>
-      <Typography className={styles.greetingSalute} variant="outline">
+      <Typography className={styles.greetingSalute} variant="span">
         Hi {USER_DATA.honorific} {USER_DATA.firstName},
       </Typography>
       <Typography className={styles.greetingTitle} variant="h2">

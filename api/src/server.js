@@ -1,10 +1,12 @@
 import express from "express";
-import { PORT, SERVER_URL } from "./config/api.config.js";
+import cors from "cors";
+import { PORT, SERVER_URL, CLIENT_URL } from "./config/api.config.js";
 import router from "./routes/index.js";
 
 const app = express();
 
 app.use(express.json());
+app.use(cors({ credentials: true, origin: CLIENT_URL }));
 app.use(router);
 
 app.listen(PORT, () => {

@@ -1,3 +1,5 @@
+@import '../../../styles/mediaQueries';
+
 .container {
   display: flex;
   flex-direction: column;
@@ -9,6 +11,11 @@
     text-align: left;
     align-self: flex-start;
     margin: 10px 20px;
+
+    @include tablet-or-wider {
+      text-align: center;
+      align-self: center;
+    }
   }
 }
 

@@ -1,7 +1,7 @@
 @import '../../../styles/colors.scss';
 
 .font {
-  color: $jetBlack;
+  margin: 0;
 }
 
 .h1 {
@@ -15,7 +15,7 @@
 }
 
 .h3 {
-  font-family: 'DM Sans Medium';
+  font-family: 'DM Sans';
   font-size: 28px;
 }
 
@@ -34,16 +34,6 @@
   font-size: 16px;
 }
 
-.title {
-  font-family: 'DM Sans Bold';
-  font-size: 24px;
-}
-
-.subtitle {
-  font-family: 'DM Sans Italic';
-  font-size: 20px;
-}
-
 .p {
   font-family: 'DM Sans';
   font-size: 16px;
@@ -52,12 +42,6 @@
 .caption {
   font-family: 'DM Sans Light';
   font-size: 14px;
-}
-
-.overline {
-  font-family: 'DM Sans Light';
-  font-size: 12px;
-  text-transform: uppercase;
 }
 
 .span {

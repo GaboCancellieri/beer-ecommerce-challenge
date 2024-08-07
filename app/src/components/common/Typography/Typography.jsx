@@ -9,12 +9,9 @@ const TYPOGRAPHY_VARIANTS = [
   'h4',
   'h5',
   'h6',
-  'title',
-  'subtitle',
   'p',
   'span',
-  'caption',
-  'overline'
+  'caption'
 ];
 
 /**
@@ -29,7 +26,9 @@ const TYPOGRAPHY_VARIANTS = [
 function Typography({ variant, className, children }) {
   const Tag = variant;
   return (
-    <Tag className={classNames(styles[variant], className)}>{children}</Tag>
+    <Tag className={classNames(styles.font, styles[variant], className)}>
+      {children}
+    </Tag>
   );
 }
 
