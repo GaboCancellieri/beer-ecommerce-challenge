@@ -73,8 +73,8 @@ The project is divided into two main parts:
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/beer-oz.git
-cd beer-oz
+git clone https://github.com/GaboCancellieri/beer-ecommerce-challenge.git
+cd beer-ecommerce-challenge
 ```
 
 ### Install Dependencies
