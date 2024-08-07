@@ -11,19 +11,28 @@ This is the frontend application for the project, built with Next.js.
    npm install
    ```
 
-2. **Run the development server:**
+2. **Setup Environment Variables:**
+
+- Copy .env.local-example to .env.local
+- Edit .env.local with your specific configuration.
+
+```bash
+cp app/envs/.env.local-example app/envs/.env.local
+```
+
+3. **Run the development server:**
 
    ```bash
    npm run dev
    ```
 
-3. **Build for production:**
+4. **Build for production:**
 
    ```bash
    npm run build
    ```
 
-4. **Start the production server:**
+5. **Start the production server:**
 
    ```bash
    npm start
@@ -32,7 +41,7 @@ This is the frontend application for the project, built with Next.js.
 ## Folder Structure
 
 - `components/`: React components used in the application.
-- `pages/`: Next.js pages.
+- `app/`: Next.js pages.
 - `public/`: Static assets.
 - `styles/`: SCSS and CSS files.
 

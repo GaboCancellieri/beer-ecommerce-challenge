@@ -40,6 +40,6 @@ export const getProductWithSkus = async productId => {
 
     return productWithSkus;
   } catch (error) {
-    return parseError(error);
+    throw new Error(parseError(error));
   }
 };

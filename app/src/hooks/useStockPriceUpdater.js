@@ -19,9 +19,6 @@ const useStockPriceUpdater = (initialSkus, interval = 5000) => {
         setSkus(updatedSkus);
       } catch (err) {
         setError(err.message);
-        window.alert(
-          `Error fetching stock and price information: ${err.message}`
-        );
       }
     }, interval);
 

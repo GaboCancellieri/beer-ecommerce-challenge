@@ -2,7 +2,8 @@
 
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
-import { Typography } from '@/components/common';
+import { ImageWithFallback, Typography } from '@/components/common';
+import styles from './ErrorBoundary.module.scss';
 
 /**
  * Generic error component to display an error message and show an alert.
@@ -19,15 +20,31 @@ function ErrorBoundary({ children, error }) {
     }
   }, [error]);
 
-  if (error) {
-    return <Typography variant="h4">Something went wrong: {error}</Typography>;
+  if (!error) {
+    return children;
   }
 
-  return children;
+  return (
+    <div className={styles.errorCard}>
+      <Typography variant="h2">Oops!</Typography>
+      <ImageWithFallback
+        src="/oops.png"
+        alt="Shrugging shoulders"
+        width={300}
+        height={250}
+        className={styles.shruggingImage}
+      />
+      <Typography variant="h5">Something went wrong</Typography>
+      <Typography variant="p" className={styles.errorMessage}>
+        {error}
+      </Typography>
+    </div>
+  );
 }
 
 ErrorBoundary.propTypes = {
-  error: PropTypes.string.isRequired
+  error: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 export default ErrorBoundary;

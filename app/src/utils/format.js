@@ -29,7 +29,8 @@ export function toKebabCase(str) {
   return str
     ? str
         .toLowerCase()
-        .replace(/ /g, '-')
+        .trim()
+        .replace(/\s+/g, '-')
         .replace(/[^\w-]+/g, '')
     : str;
 }

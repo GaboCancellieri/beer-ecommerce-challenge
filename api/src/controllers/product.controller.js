@@ -6,6 +6,7 @@ import stockPrices from "../data/stock-price.js";
  *
  * @param {Object} req - The request object.
  * @param {Object} res - The response object.
+ * @returns {void}
  */
 export function getProducts(req, res) {
   const productsWithPrices = products.map((product) => {
@@ -20,6 +21,15 @@ export function getProducts(req, res) {
   res.json(productsWithPrices);
 }
 
+/**
+ * Handles the request to get a product by its ID.
+ *
+ * @param {Object} req - The request object.
+ * @param {Object} req.params - The request parameters.
+ * @param {string} req.params.id - The ID of the product to fetch.
+ * @param {Object} res - The response object.
+ * @returns {void}
+ */
 export function getProductById(req, res) {
   const productId = parseInt(req.params.id, 10);
   const product = products.find((p) => p.id === productId);

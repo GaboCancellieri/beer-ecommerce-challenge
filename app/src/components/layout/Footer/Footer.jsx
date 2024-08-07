@@ -4,6 +4,14 @@ import { useRouter } from 'next/navigation';
 import { Button, ImageWithFallback, Typography } from '@/components/common';
 import styles from './Footer.module.scss';
 
+/**
+ * Footer component.
+ *
+ * This component represents the footer of the application. It includes company information,
+ * a logo with a button that navigates to the home page, and a rights reserved text.
+ *
+ * @returns {JSX.Element} The rendered footer component.
+ */
 export default function Footer() {
   const router = useRouter();
 

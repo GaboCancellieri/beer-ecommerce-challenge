@@ -26,19 +26,19 @@ This is the backend API for the project, built with Node.js and Express.
 ## Folder Structure
 
 - `src/`: Source files for the API.
-- `data/`: Data files used by the API.
-
-## Linting
-
-- **ESLint:**
-
-  ```bash
-  npm run lint
-  ```
+- `src/data/`: Data files used by the API.
+- `envs/`: Env variables used by the API.
 
 ## Environment Variables
 
 Create a `.env` file in the `envs/` directory with the necessary environment variables.
+
+- Copy .env.local-example to .env.local
+- Edit .env.local with your specific configuration
+
+```bash
+cp api/envs/.env.local-example api/envs/.env.local
+```
 
 ## API Endpoints
 
@@ -50,4 +50,3 @@ Create a `.env` file in the `envs/` directory with the necessary environment var
 
 - Node.js
 - Express
-- Axios

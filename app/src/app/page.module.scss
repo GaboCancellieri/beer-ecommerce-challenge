@@ -7,6 +7,10 @@
     flex-shrink: 0;
   }
 
+  & > :nth-last-child(2) {
+    margin-bottom: 40px;
+  }
+
   & > :last-child {
     margin-top: auto;
     flex-shrink: 0;

@@ -4,6 +4,14 @@ import { Button, Icon } from '@/components/common';
 import styles from '../TopNavigation.module.scss';
 import { useRouter } from 'next/navigation';
 
+/**
+ * ProductDetailNav component.
+ *
+ * This component represents the navigation bar specifically for the product detail page.
+ * It includes a back button, a title, and a more options menu.
+ *
+ * @returns {JSX.Element} The rendered product detail navigation component.
+ */
 export default function ProductDetailNav() {
   const router = useRouter();
 

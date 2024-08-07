@@ -1,4 +1,4 @@
-import ProductDetails from '@/components/layout/ProductDetails';
+import { ProductDetails } from '@/components/pages/product';
 import { TopNavigation, Footer } from '@/components/layout';
 import { ErrorBoundary } from '@/components/common';
 import { getProductWithSkus } from '@/services/stock.service';
@@ -15,6 +15,16 @@ export async function generateMetadata({ params }) {
   };
 }
 
+/**
+ * ProductDetailsPage component.
+ *
+ * This component fetches the details of a specific product along with its SKUs and handles
+ * any errors that occur during the fetching process. It displays the product details inside
+ * the ProductDetails component and uses the ErrorBoundary component to catch and display any errors.
+ *
+ * @param {Object} params - The parameters object containing the product ID and brand.
+ * @returns {JSX.Element} The rendered product details page.
+ */
 export default async function ProductDetailsPage({ params }) {
   const productId = params['productId-productBrand'].split('-')[0];
   let productWithSkus = null;
@@ -22,7 +32,7 @@ export default async function ProductDetailsPage({ params }) {
   try {
     productWithSkus = await getProductWithSkus(productId);
   } catch (err) {
-    error = err;
+    error = err.message;
   }
 
   return (
